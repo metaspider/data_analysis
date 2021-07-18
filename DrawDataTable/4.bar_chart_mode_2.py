@@ -2,9 +2,9 @@
 # ------------------------------------
 # @env : python 3.6.0
 # @auth : elviscttian
-# @func : 本代码为利用 Matplotlib 库 画直方图
+# @func : 本代码为利用 Matplotlib 库 画直方图
 # ------------------------------------
-import numpy as np
+
 from matplotlib import pyplot as plt
 from matplotlib.font_manager import FontProperties  # 字体属性设置
  

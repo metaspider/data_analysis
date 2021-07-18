@@ -2,8 +2,8 @@
 # ------------------------------------
 # @env : python 3.6.0
 # @auth : elviscttian
-# @func : 本代码为利用 Matplotlib 库 画柱状图
-import numpy as np
+# @func : 本代码为利用 Matplotlib 库 画柱状图
+
 from matplotlib import pyplot as plt
 from matplotlib.font_manager import FontProperties  # 字体属性设置
 
