@@ -2,30 +2,30 @@
 # ------------------------------------
 # @env : python 3.x
 # @auth : elviscttian
-# @func : ±¾´úÂëÎªÀûÓÃ Matplotlib ¿â »­ÕıÓàÏÒº¯Êı
+# @func : æœ¬ä»£ç ä¸ºåˆ©ç”¨ Matplotlib åº“ ç”»æ­£ä½™å¼¦å‡½æ•°
 # ------------------------------------
 import numpy as np
 from matplotlib import pyplot as plt
-from matplotlib.font_manager import FontProperties  # ×ÖÌåÊôĞÔÉèÖÃ
+from matplotlib.font_manager import FontProperties  # å­—ä½“å±æ€§è®¾ç½®
 
-font = FontProperties(fname=r"C:\windows\fonts\simsun.ttc", size=14)  # Ê¹ÓÃ±¾µØ×ÖÌå(Windows²Ù×÷ÏµÍ³)
+font = FontProperties(fname=r"C:\windows\fonts\simsun.ttc", size=14)  # ä½¿ç”¨æœ¬åœ°å­—ä½“(Windowsæ“ä½œç³»ç»Ÿ)
 
 x = np.arange(100) / 10
 y1 = np.sin(x)
 y2 = np.cos(x)
 
-plt.figure(figsize=[20, 8], dpi=80)  # Í¼Ïñ´óĞ¡
-plt.title('ÕıÏÒ/ÓàÏÒº¯ÊıÍ¼Ïñ', fontproperties="SimHei", size=20)  # ±êÌâ
-plt.xlabel('x Öá', fontproperties="SimHei", size=16)  # xÖáÉèÖÃ
-plt.ylabel('y Öá', fontproperties="SimHei", rotation=90, size=16)  # yÖáÉèÖÃ
-plt.xticks(x[::10], x[::10])  # xÖá¿Ì¶ÈÉèÖÃ
-plt.grid(alpha=0.5)  # Ìí¼ÓÍø¸ñ , ²¢ÉèÖÃÍø¸ñÍ¸Ã÷¶È
+plt.figure(figsize=[20, 8], dpi=80)  # å›¾åƒå¤§å°
+plt.title('æ­£å¼¦/ä½™å¼¦å‡½æ•°å›¾åƒ', fontproperties="SimHei", size=20)  # æ ‡é¢˜
+plt.xlabel('x è½´', fontproperties="SimHei", size=16)  # xè½´è®¾ç½®
+plt.ylabel('y è½´', fontproperties="SimHei", rotation=90, size=16)  # yè½´è®¾ç½®
+plt.xticks(x[::10], x[::10])  # xè½´åˆ»åº¦è®¾ç½®
+plt.grid(alpha=0.5)  # æ·»åŠ ç½‘æ ¼ , å¹¶è®¾ç½®ç½‘æ ¼é€æ˜åº¦
 
-plt.plot(x, y1, label="sinº¯Êı", color="red", linestyle=None, linewidth=3, alpha=0.7)
-plt.plot(x, y2, label="cosº¯Êı", color="cyan", linestyle='--')
+plt.plot(x, y1, label="sinå‡½æ•°", color="red", linestyle=None, linewidth=3, alpha=0.7)
+plt.plot(x, y2, label="coså‡½æ•°", color="cyan", linestyle='--')
 
-plt.legend(prop=font, fontsize=18, loc='upper left')  # Ìí¼ÓÍ¼Àı , ¼´ÏÔÊ¾plt.plotµÄlabel
+plt.legend(prop=font, fontsize=18, loc='upper left')  # æ·»åŠ å›¾ä¾‹ , å³æ˜¾ç¤ºplt.plotçš„label
 
-plt.savefig('./ÕıÓàÏÒº¯ÊıÍ¼Ïñ')  # ±£´æÍ¼Ïñ
-plt.pause(1)  # ÏÔÊ¾Í¼Ïñ 3s ºó×Ô¶¯¹Ø±Õ
-# plt.show()  # Õ¹Ê¾Í¼Ïñ
+plt.savefig('./æ­£ä½™å¼¦å‡½æ•°å›¾åƒ')  # ä¿å­˜å›¾åƒ
+plt.pause(1)  # æ˜¾ç¤ºå›¾åƒ 3s åè‡ªåŠ¨å…³é—­
+# plt.show()  # å±•ç¤ºå›¾åƒ

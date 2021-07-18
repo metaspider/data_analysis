@@ -2,13 +2,13 @@
 # ------------------------------------
 # @env : python 3.6.0
 # @auth : elviscttian
-# @func : ±¾´úÂëÎªÀûÓÃ Matplotlib ¿â?»­É¢µãÍ¼
+# @func : æœ¬ä»£ç ä¸ºåˆ©ç”¨ Matplotlib åº“?ç”»æ•£ç‚¹å›¾
 # ------------------------------------
 import numpy as np
 from matplotlib import pyplot as plt
-from matplotlib.font_manager import FontProperties  # ×ÖÌåÊôĞÔÉèÖÃ
+from matplotlib.font_manager import FontProperties  # å­—ä½“å±æ€§è®¾ç½®
 
-font = FontProperties(fname=r"C:\windows\fonts\simsun.ttc", size=14)  # Ê¹ÓÃ±¾µØ×ÖÌå(Windows²Ù×÷ÏµÍ³)
+font = FontProperties(fname=r"C:\windows\fonts\simsun.ttc", size=14)  # ä½¿ç”¨æœ¬åœ°å­—ä½“(Windowsæ“ä½œç³»ç»Ÿ)
 
 y_3 = [11, 17, 16, 11, 12, 11, 12, 6, 6, 7, 8, 9, 12, 15, 14, 17, 18, 21, 16, 17, 20, 14, 15, 15, 15, 19, 21, 22, 22, 22, 23]
 y_10 = [26, 26, 28, 19, 21, 17, 16, 19, 18, 20, 20, 19, 22, 23, 17, 20, 21, 20, 22, 15, 11, 15, 5, 13, 17, 10, 11, 13, 12, 13, 6]
@@ -16,26 +16,26 @@ y_10 = [26, 26, 28, 19, 21, 17, 16, 19, 18, 20, 20, 19, 22, 23, 17, 20, 21, 20, 
 x_3 = range(1, 32)
 x_10 = range(51, 82)
 
-# ÉèÖÃÍ¼ĞÎ´óĞ¡
+# è®¾ç½®å›¾å½¢å¤§å°
 plt.figure(figsize=[20, 8], dpi=80)
 
-# Ê¹ÓÃscanner·½·¨»æÖÆÉ¢µãÍ¼ , ºÍÖ®Ç°»æÖÆÕÛÏßÍ¼µÄÎ¨Ò»Çø±ğ
-plt.scatter(x_3, y_3, label="ÈıÔÂ·İ")
-plt.scatter(x_10, y_10, label="Ê®ÔÂ·İ")
+# ä½¿ç”¨scanneræ–¹æ³•ç»˜åˆ¶æ•£ç‚¹å›¾ , å’Œä¹‹å‰ç»˜åˆ¶æŠ˜çº¿å›¾çš„å”¯ä¸€åŒºåˆ«
+plt.scatter(x_3, y_3, label="ä¸‰æœˆä»½")
+plt.scatter(x_10, y_10, label="åæœˆä»½")
 
-# µ÷ÕûxÖáµÄ¿Ì¶È
+# è°ƒæ•´xè½´çš„åˆ»åº¦
 _x = list(x_3) + list(x_10)
-_xtick_labels = ["3ÔÂ{}ÈÕ".format(i) for i in x_3]
-_xtick_labels += ["10ÔÂ{}ÈÕ".format(i - 50) for i in x_10]
+_xtick_labels = ["3æœˆ{}æ—¥".format(i) for i in x_3]
+_xtick_labels += ["10æœˆ{}æ—¥".format(i - 50) for i in x_10]
 plt.xticks(_x[::3], _xtick_labels[::3], fontproperties='SimHei', rotation=45)
 
-# Ìí¼ÓÍ¼Àı
+# æ·»åŠ å›¾ä¾‹
 plt.legend(loc='upper left', prop=font)
 
-plt.xlabel("Ê±¼ä", fontproperties='SimHei', size=16)
-plt.ylabel("ÎÂ¶È", fontproperties='SimHei', rotation=90, size=16)
-plt.title("±êÌâ", fontproperties='SimHei', size=18)
+plt.xlabel("æ—¶é—´", fontproperties='SimHei', size=16)
+plt.ylabel("æ¸©åº¦", fontproperties='SimHei', rotation=90, size=16)
+plt.title("æ ‡é¢˜", fontproperties='SimHei', size=18)
 
-plt.savefig('./»æÖÆÉ¢µãÍ¼')  # ±£´æÍ¼Ïñ
-plt.pause(1)  # ÏÔÊ¾Í¼Ïñ 3s ºó×Ô¶¯¹Ø±Õ
-# plt.show()  # Õ¹Ê¾Í¼Ïñ
+plt.savefig('./ç»˜åˆ¶æ•£ç‚¹å›¾')  # ä¿å­˜å›¾åƒ
+plt.pause(1)  # æ˜¾ç¤ºå›¾åƒ 3s åè‡ªåŠ¨å…³é—­
+# plt.show()  # å±•ç¤ºå›¾åƒ

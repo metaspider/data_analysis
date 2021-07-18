@@ -2,7 +2,7 @@
 # ------------------------------------
 # @env : python 3.6.0
 # @auth : elviscttian
-# @func : 本代码为利用 Matplotlib 库 画柱状图
+# @func : 本代码为利用 Matplotlib 库 画柱状图
 # ------------------------------------
 import numpy as np
 from matplotlib import pyplot as plt
